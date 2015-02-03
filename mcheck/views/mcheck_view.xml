@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+		<record id="mcheck_action_form_mcheck" model="ir.actions.act_window">
+				<field name="name">mcheck</field>
+				<field name="res_model">mcheck.mcheck</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>
+				<field name="domain">[]</field>
+				<field name="context">{}</field>
+				<field name="view_id" eval="False"/>            
+				<field name="help" type="html">
+				  <p class="oe_view_nocontent_create">
+					Click to add a new mcheck.
+				  </p>
+				  <p>
+					With just a quick glance on the Odoo mcheck screen, you
+					can easily find all the information about your each day mcheck;					
+				  </p>
+				</field>
+		</record>
+
+    <menuitem action="mcheck_action_form_mcheck" id="mcheck_mcheck" parent="account.menu_finance_bank_and_cash" sequence="20" groups="mcheck.group_check_manager"/>
+
+
+
+
+
+        <record model="ir.ui.view" id="view_mcheck_form">
+            <field name="name">mcheck.mcheck.form</field>
+            <field name="model">mcheck.mcheck</field>
+            <field name="arch" type="xml">
+                <form string="miscellaneous checks">
+                  <header>
+			<button name="cancel_voucher" string="Cancel Voucher" type="object" states="posted" confirm="Are you sure you want to unreconcile this record?"/>
+			<button name="action_validate" type="object" string="Validate" states="draft" class="oe_highlight"/>
+                      <field name="state" widget="statusbar" statusbar_visible="draft,posted" statusbar_colors='{"proforma":"blue"}'/>
+                  </header>
+                   <sheet string="Accounting Voucher">
+                    <group col="4" colspan="4"> 
+                  	 <field name="journal_id" widget="selection" domain="[('checkmiscelaneous','=',True)]" attrs="{'readonly': [('state','!=','draft')]}" />
+			 <field name="number" readonly="1"/>           
+   			 <field name="date" attrs="{'readonly': [('state','!=','draft')]}"/>
+            	     </group>
+                    <group col="2" colspan="4">    
+<field name="reference" attrs="{'readonly': [('state','!=','draft')]}"/>
+                        <field name="name"  attrs="{'readonly': [('state','!=','draft')]}"/>
+                        
+             </group>
+
+                    <notebook colspan="4">
+                        <page string="Voucher Entry">
+                          <field name="mcheck_ids"  mode="tree" widget="one2many_list" attrs="{'readonly': [('state','!=','draft')]}">
+				<tree editable="top">
+					<field name="account_id" />
+					<field name="name"/>
+					<field name="type"/>
+					<field name="amount" sum="Total Amount"/>
+				</tree>
+			  </field>
+                        </page>
+                        <page string="Journal Items" attrs="{'invisible': [('state','!=','posted')]}">
+
+                            <field name="move_ids" readonly="1">
+                               <tree string="Journal Items">
+                                   <field name="move_id"/>
+                                   <field name="ref"/>
+                                   <field name="date"/>
+                                   <field name="statement_id"/>
+                                   <field name="account_id"/>
+                                   <field name="name"/>
+                                   <field name="debit" sum="Debit"/>
+                                   <field name="credit" sum="Credit"/>
+                                   <field name="state"/>
+                                   <field name="reconcile_id"/>
+                               </tree>
+                            </field>
+                        </page>
+                       
+                    </notebook>
+<group >
+ <field name="obs" attrs="{'invisible': [('state','!=','cancel')]}"/>
+</group>
+                  </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_mcheck_tree">
+            <field name="name">mcheck.mcheck.tree</field>
+            <field name="model">mcheck.mcheck</field>
+            <field name="arch" type="xml">
+                <tree string="miscellaneous checks">  
+			<field name="number" />               
+                        <field name="date" />
+                        <field name="journal_id" widget="selection" />
+                        <field name="name" colspan="2"/>
+                        <field name="reference"/>
+			<field name="amount"/>
+			<field name="state"/>
+
+                </tree>
+            </field>
+        </record>
+
+
+    </data>
+</openerp>

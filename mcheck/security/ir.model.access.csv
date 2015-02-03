@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mcheck_mcheck,mcheck.mcheck,model_mcheck_mcheck,group_check_manager,1,1,1,1
+access_mcheck_lines,mcheck.mcheck_name,model_mcheck_mcheck_name,group_check_manager,1,1,1,1
+access_account_move_line,account.account_move_line,model_account_move_line,group_check_manager,1,1,1,1
+access_account_journal,account.journal,model_account_journal,group_check_manager,1,1,1,1

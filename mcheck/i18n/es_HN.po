@@ -1,0 +1,361 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mcheck
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-16 21:45+0000\n"
+"PO-Revision-Date: 2015-01-16 21:45+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mcheck
+#: help:mcheck.mcheck,state:0
+msgid " * The 'Draft' status is used when a user is encoding a new and unconfirmed Voucher. 		                \n"
+"* The 'Pro-forma' when voucher is in Pro-forma status,voucher does not have an voucher number. 		                \n"
+"* The 'Posted' status is used when user create voucher,a voucher number is generated and voucher entries are created in account 		                \n"
+"* The 'Cancelled' status is used when user cancel voucher."
+msgstr " * The 'Draft' status is used when a user is encoding a new and unconfirmed Voucher.                 * The 'Pro-forma' when voucher is in Pro-forma status,voucher does not have an voucher number.                 * The 'Posted' status is used when user create voucher,a voucher number is generated and voucher entries are created in account                 * The 'Cancelled' status is used when user cancel voucher."
+
+#. module: mcheck
+#: model:ir.actions.act_window,help:mcheck.mcheck_action_form_mcheck
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"					Click to add a new mcheck.\n"
+"				  </p>\n"
+"				  <p>\n"
+"					With just a quick glance on the Odoo mcheck screen, you\n"
+"					can easily find all the information about your each day mcheck;					\n"
+"				  </p>\n"
+"				"
+msgstr "<p class=\"oe_view_nocontent_create\">Click to add a new mcheck.  </p>  <p>With just a quick glance on the Odoo mcheck screen, youcan easily find all the information about your each day mcheck;  </p>"
+
+#. module: mcheck
+#: field:mcheck.mcheck_name,account_id:0
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: mcheck
+#: field:mcheck.mcheck,move_id:0
+msgid "Account Entry"
+msgstr "Entrada"
+
+#. module: mcheck
+#: view:mcheck.mcheck:mcheck.view_mcheck_form
+msgid "Accounting Voucher"
+msgstr "Comprobante "
+
+#. module: mcheck
+#: field:mcheck.mcheck_name,amount:0
+msgid "Amount"
+msgstr "Monto"
+
+#. module: mcheck
+#: view:mcheck.mcheck:mcheck.view_mcheck_form
+msgid "Are you sure you want to unreconcile this record?"
+msgstr "¿Seguro que desea desconciliar este registro?"
+
+#. module: mcheck
+#: view:website:mcheck.mcheck_print
+msgid "CHEQUE #"
+msgstr "CHEQUE #"
+
+#. module: mcheck
+#: view:mcheck.mcheck:mcheck.view_mcheck_form
+msgid "Cancel Voucher"
+msgstr "Cancel Voucher"
+
+#. module: mcheck
+#: selection:mcheck.mcheck,state:0
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: mcheck
+#: model:res.groups,name:mcheck.group_check_manager
+msgid "Checks / Manager"
+msgstr "Cheques / Manager"
+
+#. module: mcheck
+#: code:addons/mcheck/model/mcheck.py:47
+#, python-format
+msgid "Configuration Error !"
+msgstr "Error de configuración!"
+
+#. module: mcheck
+#: field:mcheck.mcheck,create_uid:0
+#: field:mcheck.mcheck_name,create_uid:0
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: mcheck
+#: field:mcheck.mcheck,create_date:0
+#: field:mcheck.mcheck_name,create_date:0
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: mcheck
+#: view:mcheck.mcheck:mcheck.view_mcheck_form
+#: selection:mcheck.mcheck_name,type:0
+msgid "Credit"
+msgstr "Credito"
+
+#. module: mcheck
+#: view:website:mcheck.mcheck_print
+msgid "Cuenta"
+msgstr "Cuenta"
+
+#. module: mcheck
+#: field:mcheck.mcheck,date:0
+msgid "Date"
+msgstr "Fecha"
+
+#. module: mcheck
+#: view:website:mcheck.mcheck_print
+msgid "Debe"
+msgstr "Debe"
+
+#. module: mcheck
+#: view:mcheck.mcheck:mcheck.view_mcheck_form
+#: selection:mcheck.mcheck_name,type:0
+msgid "Debit"
+msgstr "Debito"
+
+#. module: mcheck
+#: field:mcheck.mcheck,type:0
+msgid "Default Type"
+msgstr "Tipo predeterminado"
+
+#. module: mcheck
+#: field:mcheck.mcheck_name,name:0
+msgid "Description"
+msgstr "Descripción"
+
+#. module: mcheck
+#: view:website:mcheck.mcheck_print
+msgid "Detalle"
+msgstr "Detalle"
+
+#. module: mcheck
+#: view:website:mcheck.external_layout_cierre
+msgid "Dirección:"
+msgstr "Dirección:"
+
+#. module: mcheck
+#: field:mcheck.mcheck_name,type:0
+msgid "Dr/Cr"
+msgstr "Dr/Cr"
+
+#. module: mcheck
+#: selection:mcheck.mcheck,state:0
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: mcheck
+#: help:mcheck.mcheck,date:0
+msgid "Effective date for accounting entries"
+msgstr "Fecha de vigencia para los asientos contables"
+
+#. module: mcheck
+#: view:website:mcheck.mcheck_print
+msgid "Haber"
+msgstr "Haber"
+
+#. module: mcheck
+#: field:mcheck.mcheck,id:0
+#: field:mcheck.mcheck_name,id:0
+#: field:report.mcheck.mcheck_print,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: mcheck
+#: model:ir.model,name:mcheck.model_account_journal
+#: field:mcheck.mcheck,journal_id:0
+msgid "Journal"
+msgstr "Chequera"
+
+#. module: mcheck
+#: model:ir.model,name:mcheck.model_account_move_line
+#: view:mcheck.mcheck:mcheck.view_mcheck_form
+msgid "Journal Items"
+msgstr "Apuntes contables"
+
+#. module: mcheck
+#: view:website:mcheck.mcheck_print
+msgid "La suma de"
+msgstr "La suma de"
+
+#. module: mcheck
+#: field:mcheck.mcheck,write_uid:0
+#: field:mcheck.mcheck_name,write_uid:0
+msgid "Last Updated by"
+msgstr "Última actualización realizada por"
+
+#. module: mcheck
+#: field:mcheck.mcheck,write_date:0
+#: field:mcheck.mcheck_name,write_date:0
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: mcheck
+#: field:mcheck.mcheck,name:0
+msgid "Memo"
+msgstr "Memo"
+
+#. module: mcheck
+#: field:account.journal,checkmiscelaneous:0
+msgid "Miscellaneous Checks"
+msgstr "Cheques Misceláneos"
+
+#. module: mcheck
+#: code:addons/mcheck/model/mcheck.py:114
+#, python-format
+msgid "No lines"
+msgstr "Sin lineas"
+
+#. module: mcheck
+#: field:mcheck.mcheck,number:0
+msgid "Number"
+msgstr "Numero"
+
+#. module: mcheck
+#: view:website:mcheck.mcheck_print
+msgid "Paguese a"
+msgstr "Paguese a"
+
+#. module: mcheck
+#: field:mcheck.mcheck,reference:0
+msgid "Pay to"
+msgstr "Pagar a"
+
+#. module: mcheck
+#: selection:mcheck.mcheck,type:0
+msgid "Payment"
+msgstr "Pago"
+
+#. module: mcheck
+#: code:addons/mcheck/model/mcheck.py:47
+#, python-format
+msgid "Please activate the sequence of selected journal !"
+msgstr "Por favor, active la secuencia de revista seleccionada!"
+
+#. module: mcheck
+#: selection:mcheck.mcheck,state:0
+msgid "Posted"
+msgstr "Contabilizado"
+
+#. module: mcheck
+#: selection:mcheck.mcheck,state:0
+msgid "Pro-forma"
+msgstr "Pro-forma"
+
+#. module: mcheck
+#: selection:mcheck.mcheck,type:0
+msgid "Purchase"
+msgstr "Compra"
+
+#. module: mcheck
+#: view:website:mcheck.external_layout_cierre
+msgid "RTN:"
+msgstr "RTN:"
+
+#. module: mcheck
+#: selection:mcheck.mcheck,type:0
+msgid "Receipt"
+msgstr "Recibo"
+
+#. module: mcheck
+#: selection:mcheck.mcheck,type:0
+msgid "Sale"
+msgstr "Venta"
+
+#. module: mcheck
+#: field:mcheck.mcheck,state:0
+msgid "Status"
+msgstr "Estado"
+
+#. module: mcheck
+#: field:mcheck.mcheck,tax_amount:0
+msgid "Tax Amount"
+msgstr "Monto de impuestos"
+
+#. module: mcheck
+#: view:website:mcheck.external_layout_cierre
+msgid "Tel:"
+msgstr "Tel:"
+
+#. module: mcheck
+#: field:mcheck.mcheck,amount:0
+#: field:mcheck.mcheck,amountcredit:0
+#: field:mcheck.mcheck,amountdebit:0
+#: field:mcheck.mcheck,amounttext:0
+msgid "Total"
+msgstr "Total"
+
+#. module: mcheck
+#: view:mcheck.mcheck:mcheck.view_mcheck_form
+msgid "Total Amount"
+msgstr "Cantidad Total"
+
+#. module: mcheck
+#: help:mcheck.mcheck,reference:0
+msgid "Transaction reference number."
+msgstr "Número de referencia de la operación."
+
+#. module: mcheck
+#: view:mcheck.mcheck:mcheck.view_mcheck_form
+msgid "Validate"
+msgstr "Validar"
+
+#. module: mcheck
+#: view:mcheck.mcheck:mcheck.view_mcheck_form
+msgid "Voucher Entry"
+msgstr "Comprobante"
+
+#. module: mcheck
+#: code:addons/mcheck/model/mcheck.py:112
+#, python-format
+msgid "amount total is 0"
+msgstr "Suma Total es 0"
+
+#. module: mcheck
+#: field:mcheck.mcheck,mcheck_ids:0
+#: field:mcheck.mcheck,move_ids:0
+msgid "checks lines"
+msgstr "Lineas de Cheque"
+
+#. module: mcheck
+#: field:account.move.line,mcheck_id:0
+#: model:ir.actions.act_window,name:mcheck.mcheck_action_form_mcheck
+#: model:ir.ui.menu,name:mcheck.mcheck_mcheck
+#: field:mcheck.mcheck_name,mcheck_id:0
+msgid "mcheck"
+msgstr "Cheques Misceláneos"
+
+#. module: mcheck
+#: view:mcheck.mcheck:mcheck.view_mcheck_form
+#: view:mcheck.mcheck:mcheck.view_mcheck_tree
+msgid "miscellaneous checks"
+msgstr "Cheques Misceláneos"
+
+#. module: mcheck
+#: model:ir.actions.report.xml,name:mcheck.mcheck_mcheck_print
+msgid "print check"
+msgstr "Imprimir Cheque"
+
+#. module: mcheck
+#: code:addons/mcheck/model/mcheck.py:114
+#, python-format
+msgid "select more than one line"
+msgstr "seleccionar más de una línea"
+
+#. module: mcheck
+#: code:addons/mcheck/model/mcheck.py:112
+#, python-format
+msgid "the value of total is 0"
+msgstr "El valor del total es 0"
+

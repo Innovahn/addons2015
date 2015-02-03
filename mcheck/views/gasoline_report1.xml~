@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        
+
+	<report
+    	id="mcheck_print_closing"
+    	model="mcheck.mcheck"
+    	string="print check"
+   	 report_type="qweb-pdf"
+    	name="mcheck.mcheck_closing"
+   	 file="check"
+        attachment="(object.state in ('finish'))"
+/>
+
+
+    </data>
+</openerp>

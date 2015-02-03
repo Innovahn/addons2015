@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+<record model="ir.ui.view" id="view_pos_account_journal_form1">
+    <field name="name">account.journal.form.inherit2</field>
+    <field name="model">account.journal</field>
+    <field name="inherit_id" ref="account.view_account_journal_form"/>
+    <field name="arch" type="xml">
+<field name="allow_date" position="after">
+<field name="checkmiscelaneous" attrs="{'invisible' : [('type', 'not in', ['bank'])] }"/>
+</field>
+    </field>
+</record>
+    </data>
+</openerp>
