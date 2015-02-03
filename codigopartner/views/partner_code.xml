@@ -9,7 +9,8 @@
             <field name="function" position="before" invisible="1">
               <field name="partnercode" />
             </field>
-              <field name="title" invisible="1"/>
+              <field name="title" position="replace"/>
+              <field name="function" position="replace"/>
           </field>
         </record>
  </data>
