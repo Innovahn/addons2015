@@ -126,7 +126,7 @@ class mcheck(osv.Model):
 						totald+=lines.amount
 					if lines.type=='cr':
 						totalc+=lines.amount
-			result[mcheck.id]=self.addComa(str(totald-totalc))
+			result[mcheck.id]=self.addComa('%.2f'%(totald-totalc))
 		return result	
 	def _get_totaldebit(self, cr, uid, ids, field, arg, context=None):
 		result = {}
@@ -135,7 +135,7 @@ class mcheck(osv.Model):
 				totald=0
 				for lines in mcheck.move_ids:
 					totald+=lines.debit
-			result[mcheck.id]=self.addComa(str(totald))
+			result[mcheck.id]=self.addComa('%.2f'%(totald))
 		return result	
 	def _get_totalcredit(self, cr, uid, ids, field, arg, context=None):
 		result = {}
@@ -144,7 +144,7 @@ class mcheck(osv.Model):
 				totalc=0
 				for lines in mcheck.move_ids:
 					totalc+=lines.credit
-			result[mcheck.id]=self.addComa(str(totalc))
+			result[mcheck.id]=self.addComa('%.2f'%(totalc))
 		return result	
 
 
