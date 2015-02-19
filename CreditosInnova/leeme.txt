@@ -1,0 +1,16 @@
+19 de Febrero 2015
+
+este es un parche que sustituye los siguientes archivos
+
+1. El archivo addons/web/static/src/xml/base.xml
+En este archivo se encuentra el formulario about y el menu para acceder a este formulario
+
+2. y el Archivo addons/web/views/webclient_templates.xml
+En este archivo se encuentra el pie de pagina que dice powered by odoo
+
+
+Copiar la carpeta CreditosInnovaResorces y el script AgregarCreditosInnova.sh en la carpeta de odoo
+Agregar Permisos al script en la terminal con este comando 
+		chmod +x AgregarCreditosInnova.sh
+Ejecutar el script desde la terminal
+		./AgregarCreditosInnova.sh
