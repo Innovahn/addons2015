@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+	<record model="ir.ui.view" id="view_vendor_receipt_form_inh">
+      		<field name="name">account.voucher.receipt.form.inh</field>
+      		<field name="model">account.voucher</field>
+      		<field name="type">form</field>
+      		<field name="inherit_id" ref="account_voucher.view_vendor_receipt_form" />
+      		
+		<field name="arch" type="xml">
+		    <field name="payment_option" position="replace">
+		    	<field name="payment_option" required="1" />
+		    </field>
+		    <field name="writeoff_acc_id" position="replace">
+			<field name="writeoff_acc_id" domain="[('type','=','other')]"/>
+		    </field>
+		    <field name="comment" position="replace">
+			<field name="comment"/>
+		    </field>
+		    <field name="analytic_id" position="replace" />
+			<field name="analytic_id" groups="analytic.group_analytic_accounting" />
+		
+		    </field>
+		                
+		 </field>
+   	</record>
+	</data>
+</openerp>
