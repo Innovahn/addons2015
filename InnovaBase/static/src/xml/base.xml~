@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="UserMenu" >
+        <t t-jquery="ul.dropdown-menu" t-operation="replace">
+            <ul class="dropdown-menu">
+                <li><a href="#" data-menu="settings">Preferences</a></li>
+                <li><a href="#" data-menu="about">About Innova</a></li>
+                <li><a href="#" data-menu="help">Help</a></li>
+                <li><a href="#" data-menu="logout">Log out</a></li>
+            </ul>
+        </t>
+    </t>
+    <t t-extend="WebClient.announcement_bar" >
+        <t t-jquery="table.oe_webclient" t-operation="replace">
+        </t>
+    </t>
+
+
+
+    <t t-extend="UserMenu.about">
+	<t t-jquery="div.container-fluid" t-operation="replace">
+	<div class="container-fluid" style ="background: url('/InnovaBase/static/src/img/innovabackground.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;">
+	</t>
+
+	<t t-jquery="div.user-image" t-operation="replace">
+	<div class="user-image">
+                        <img src="/InnovaBase/static/src/img/innovalogo.png" alt="Innova" title="Grupo Innova" class="img-square"/>
+        </div>
+	</t>
+
+
+	<t t-jquery="user-body" t-operation="replace">
+	<div class="user-body">
+                            <div class="tab-content">
+                                <div id="settings" class="tab-pane active">
+				    <p>.</p>
+				    <p>.</p>
+                                    <p>Licenced under the terms of <a target="_blank" href="http://www.gnu.org/licenses/agpl.html" style="text-decoration: underline;">GNU Affero General Public License</a></p>
+                                    <p>For more information visit <a target="_blank" href="http://www.innovahn.com" style="text-decoration: underline;">Innovahn.com</a></p>
+                                </div>
+                                <div id="email" class="tab-pane">
+                                    <h4>Grupo Innova</h4>
+                                    <p>
+                                        info@innovahn.com<br/>
+					tel: 2243-7886<br/>
+                                        Boulevard Suyapa, Edificio Metropolis, Torre 2 <br/>
+                                        Tegucigalpa Honduras
+                                    </p>
+                                    <!-- TODO - ALIAS contactus -->
+                                    <a class='btn btn-link' href='http://www.innovahn.com'>Our website</a>
+                                </div>
+                                <div id="events" class="tab-pane">
+                                    <h4>Discover Events of Innova around the world...</h4>
+                                    <a class='btn btn-link' href='http://www.innovahn.com'> Our next Events</a>
+                                </div>
+                                <div id="social" class="tab-pane">
+                                    <h4>Follow Us...</h4>
+                                    <a href=""><i class="fa fa-facebook-square fa-3x social-fb"></i></a>
+                                    <a href=""><i class="fa fa-twitter-square fa-3x social-tw"></i></a>
+                                    <a href=""><i class="fa fa-google-plus-square fa-3x social-gp"></i></a>
+                                    <a href=""><i class="fa fa-linkedin-square fa-3x social-lk"></i></a>
+                                </div>
+                            </div>
+                        </div>
+	</t>
+</t>
+
+</templates>
+
+
+
+
+

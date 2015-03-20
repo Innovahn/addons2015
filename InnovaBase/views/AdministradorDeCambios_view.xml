@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<openerp>
+	<data>
+		<record model="innovabase.administradorcambios" id="patches_manage_view_id">
+			<field name="path">PATH</field>
+			<field name = "active">active</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="p_manage_action_id">
+			<field name="name">p.manage.action</field>
+			<field name="view_id" ref="patches_manage_view_id"/>
+			<field name ="res_model">innovabase.administradorcambios</field>
+			<!--field name="view_type">form|tree</field-->
+			<field name="view_mode">form</field>
+		</record>
+		
+		<menuitem id="innova_menu_raiz_id" name="Innova"    sequence="1" />
+		<menuitem id="innova_menu_id"	   name="Innova"    parent="innova_menu_raiz_id" sequence="10" />
+		<menuitem id="p_manage_id" 	   name="act/desact innova" parent="innova_menu_id"      sequence="10" action="p_manage_action_id" />
+	</data>
+</openerp>

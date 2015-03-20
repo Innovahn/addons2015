@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+	<record model="ir.ui.view" id="res_currency_view_inh">
+      		<field name="name">res.currency.form.view.inh</field>
+      		<field name="model">res.currency</field>
+      		<field name="type">form</field>
+		<field name="type">form</field>
+      		<field name="inherit_id" ref="base.view_currency_form" />
+      		
+		<field name="arch" type="xml">
+			<tree position="inside">
+               			<field name="write_uid"/>
+                        	<field name="write_date"/>
+                  	</tree>
+   		</field>
+   	</record>
+
+	
+
+	<record model="ir.ui.view" id="view_account_invoice_form_inh">
+            <field name="name">account.account.invoice.form.inh</field>
+            <field name="model">account.invoice</field>
+	    <field name="inherit_id" ref="account.invoice_form" />
+            <field name="arch" type="xml">
+		 <field name="date_invoice" position="replace"/>
+		 	<field name="date_invoice"/>
+		 </field>
+            </field>
+        </record>
+
+	</data>
+</openerp>

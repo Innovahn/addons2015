@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+  
+	<template id="web.menu_secondary">
+            <a class="oe_logo" t-att-href="'/web/?debug' if debug else '/web'">
+                <span class="oe_logo_edit">Edit Company data</span>
+                <img src='/web/binary/company_logo'/>
+            </a>
+            <div>
+                <div>
+                    <div class="oe_secondary_menus_container">
+                        <t t-foreach="menu_data['children']" t-as="menu">
+                            <div style="display: none" class="oe_secondary_menu" t-att-data-menu-parent="menu['id']">
+                                <t t-foreach="menu['children']" t-as="menu">
+                                    <div class="oe_secondary_menu_section">
+                                        <t t-esc="menu['name']"/>
+                                    </div>
+                                    <t t-call="web.menu_secondary_submenu"/>
+                                </t>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </div>
+            <div class="oe_footer">
+                Powered by <a href="http://www.innovahn.com" target="_blank"><span>Grupo Innova</span></a>
+            </div>
+        </template>
+
+        <template id="web.login_layout" name="Login Layout">
+            <t t-call="web.layout">
+                <t t-set="head">
+                    <link href="/web/static/src/css/base.css" rel="stylesheet"/>
+                    <link href="/web/static/lib/bootstrap/css/bootstrap.css" rel="stylesheet"/>
+                </t>
+                <t t-set="body_classname" t-value="'oe_single_form'"/>
+                <div class="oe_single_form_container modal-content">
+                    <div class="oe_single_form_logo">
+                        <img src="/web/binary/company_logo"/>
+                    </div>
+                    <hr/>
+                    <t t-raw="0"/>
+
+                    <div class="oe_single_form_footer" t-if="not disable_footer">
+                        <t t-if="not disable_database_manager">
+                          <a class="oe_login_manage_db" t-attf-href="/web/database/manager{{ '?debug' if debug else '' }}">Manage Databases</a>
+                          <span class="oe_footer_seperator"> | </span>
+                        </t>
+                        <a href="http://www.innovahn.com" target="_blank">Powered by <span>Grupo Innova</span></a>
+                    </div>
+                </div>
+            </t>
+        </template>

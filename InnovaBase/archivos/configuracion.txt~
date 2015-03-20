@@ -1,0 +1,9 @@
+#  -*- coding: utf-8 -*-
+
+# El Archivo que desea sustituir debe estar dentro de la carpeta Archivos dentro de InnovaBase
+# Separado por coma debe escribir la ruta incluyendo el nombre de como se llamará el archivo en su nueva ubicación
+# la ruta donde se copiara o sustiuira el archivo debe ser a partir de la carpeta raiz odoo 
+
+
+> webclient_templates.xml > addons/web/views/webclient_templates.xml
+

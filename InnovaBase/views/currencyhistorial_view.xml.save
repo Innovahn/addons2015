@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+	<record model="ir.ui.view" id="res_currency_view_inh">
+      		<field name="name">res.currency.form.view.inh</field>
+      		<field name="model">res.currency</field>
+      		<field name="type">form</field>
+      		<field name="inherit_id" ref="base.view_currency_form" />
+      		
+		<field name="arch" type="xml">
+			<tree position="inside">
+               			<field name="write_uid"/>
+                        	<field name="write_date"/>
+                  	</tree>
+   		</field>
+   	</record>
+	<record model="ir.ui.view" id="view_account_voucher_form_inherit13">
+                <field name="name">account.voucher.form.inherit13</field>
+                <field name="model">account.voucher</field>
+                <field name="inherit_id" ref="account_voucher.view_vendor_receipt_form" />
+                <field name="arch" type="xml">
+
+                     <field name="account_voucher.view_vendor_receipt_form" position="replace">
+                        <field name="account_voucher" required="1"/>
+                     </field>
+
+                </field>
+        </record>
+
+	</data>
+</openerp>

@@ -1,0 +1,18 @@
+from openerp.osv import fields, osv
+
+class res_company(osv.Model):
+    _name = 'innovabase.administradorcambios'
+    _columns = {
+        'path': fields.text('path'),
+	'active': fields.boolean('activo'),
+    }
+def create(self, cr, uid, values, context=None):
+        id = super(account_config_settings, self).create(cr, uid, values, context)
+        # Hack: to avoid some nasty bug, related fields are not written upon record creation.
+        # Hence we write on those fields here.
+        vals = {}
+        for fname, field in self._columns.iteritems():
+            if isinstance(field, fields.related) and fname in values:
+                vals[fname] = values[fname]
+        self.write(cr, uid, [id], vals, context)
+        return id
