@@ -1,7 +1,0 @@
-al sustituir los archivos, si odoo provee actualizaciones que incluyen estos archivos las actualizaciones seran sustituidas también
-
-sustituir el archivo /odoo/addons/web/static/src/xml/base.xml
-En este archivo se encuentra el formulario about y el menu para acceder a este formulario
-
-sustituir /odoo/addons/web/views/webclient_templates.xml
-En este archivo se encuentra el pie de pagina que dice powered by odoo
