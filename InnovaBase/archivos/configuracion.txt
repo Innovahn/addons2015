@@ -8,4 +8,7 @@
 > webclient_templates.xml > addons/web/views/webclient_templates.xml
 > database_manager.html > addons/web/views/database_manager.html
 > database_selector.html > addons/web/views/database_selector.html
+> logo.png > addons/web/static/src/img/nologo.png
+> logo.png > addons/web/static/src/img/logo2.png
+> logo.png > addons/web/static/src/img/logo.png
 
