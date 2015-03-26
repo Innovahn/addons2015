@@ -14,10 +14,6 @@ class administradorcambios(osv.Model):
 		config_id = super(administradorcambios, self).create(cr, uid, vals, context=context)
 
 		RutaArchivos = vals['path']
-		print('inicio'*50)
-		print(RutaArchivos)
-		print('fin'*50)
-		
         	infile = open(RutaArchivos+'/configuracion.txt', 'r')
 
 	        # recorremos el archivo linea por linea
@@ -31,6 +27,6 @@ class administradorcambios(osv.Model):
 	                        if os.path.exists(os.getcwd()+'/'+rutas[2].lstrip()[:-1]):
 					print('if'*50)
 					import time
-					os.rename(os.getcwd()+'/'+rutas[2].lstrip()[:-1],os.getcwd()+'/'+rutas[2].lstrip()[:-1]+time.strftime('%d %b %y'))
+					os.rename(os.getcwd()+'/'+rutas[2].lstrip()[:-1],os.getcwd()+'/'+rutas[2].lstrip()[:-1]+time.strftime('%d %b %Y'))
         	                #copia el archivo rutas[1] en la ubicacion rutas[2]
                 	        shutil.copyfile(RutaArchivos+'/'+rutas[1].lstrip()[:-1],os.getcwd()+'/'+rutas[2].lstrip()[:-1])

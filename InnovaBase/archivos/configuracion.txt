@@ -1,13 +1,25 @@
 #  -*- coding: utf-8 -*-
 
 # El Archivo que desea sustituir debe estar dentro de la carpeta Archivos dentro de InnovaBase
-# Separado por coma debe escribir la ruta incluyendo el nombre de como se llamará el archivo en su nueva ubicación
+# Separado por el simbolo "mayor que" debe escribir la ruta incluyendo el nombre de como se llamará el archivo en su nueva ubicación
 # la ruta donde se copiara o sustiuira el archivo debe ser a partir de la carpeta raiz odoo 
 
 
 > webclient_templates.xml > addons/web/views/webclient_templates.xml
 > database_manager.html > addons/web/views/database_manager.html
 > database_selector.html > addons/web/views/database_selector.html
+
+> base_i18n_es_HN.po > openerp/addons/base/i18n/es_HN.po
+> account_i18n_es_HN.po > addons/account/i18n/es_HN.po
+> purchase_i18n_es_HN.po > addons/purchase/i18n/es_HN.po
+> sale_i18n_es_HN.po > addons/sale/i18n/es_HN.po
+> stock_i18n_es_HN.po > addons/stock/i18n/es_HN.po
+
+> account_general_ledger.py > addons/account/report/account_general_ledger.py
+
+> report_invoice.xml > addons/account/views/report_invoice.xml
+> report_generalledger.xml > addons/account/views/report_generalledger.xml
+
 > logo.png > addons/web/static/src/img/nologo.png
 > logo.png > addons/web/static/src/img/logo2.png
 > logo.png > addons/web/static/src/img/logo.png
