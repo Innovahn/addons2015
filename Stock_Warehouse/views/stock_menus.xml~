@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+		<!--Acciones-->
+   <record model="ir.actions.act_window" id="stock_in_act_tree1">
+	<field name="name">stock_in</field>
+	<field name="res_model">stock.picking</field>
+	<field name="view_mode">tree,form</field>
+    <!-- field name="context"> {'search_default_name' : '%/IN/%'}  </field -->
+   </record>
+
+   <record model="ir.actions.act_window" id="stock_out_act_tree1">
+	<field name="name">stock out</field>
+	<field name="res_model">stock.picking</field>
+	<field name="view_mode">tree,form</field>
+    <field name="context">{'search_default_name': '%/OUT/%'}</field>
+   </record>
+
+   <record model="ir.actions.act_window" id="stock_trans_act_tree1">
+	<field name="name">stock transfer</field>
+	<field name="res_model">stock.picking</field>
+	<field name="view_mode">tree,form</field>
+   </record>		
+        <!--Menus -->
+  <menuitem id="stock_in"  name="Stock In"  parent="stock.menu_stock_warehouse_mgmt" sequence="10" action="stock_in_act_tree"/>
+  <menuitem id="stock_out" name="Stock Out" parent="stock.menu_stock_warehouse_mgmt" sequence="20" action="stock_out_act_tree"/>
+  <menuitem id="stock_incoming" name="Stock Incoming" parent="stock.menu_stock_warehouse_mgmt" sequence="30" action="stock.action_receipt_picking_move"/>
+
+  </data>
+</openerp>
